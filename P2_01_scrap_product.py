@@ -3,49 +3,53 @@ import re
 import requests
 import os
 import wget
+import shutil
 
-CUR_DIR = os.path.dirname(__file__)
+# Scraping a book
 
-# Scrapping d'un livre
-
-# Fonction qui permet de récupérer et d'analyser le contenu d'une url
+# This function is used to check and analyze a url.
 def get_and_parse(url):
     result = requests.get(url)
     soup = BeautifulSoup(result.text, 'html.parser')
     if result.ok:
         return(soup)
 
-# Fonction qui permet le scrapping d'un livre et l'écriture des données dans un fichier csv
+# This function extracts all the information of a book and writing the data to a csv file and makes a directory with the category name to stores it.
 def scrap_book(url_book):
     soup = get_and_parse(url_book)
-    product_page_url = url_book # Je récupère l'url de la page du produit.
-    universal_product_code = soup.find('table', class_="table table-striped").find_all('td')[0].text # Je récupère le code UPC.
-    title = soup.find('div', {'class': 'product_main'}).h1.text # Je récupère le titre du livre
-    price_including_tax = soup.find('table', class_="table table-striped").find_all('td')[3].text[2:] # Je récupère le prix du produit taxes incluses
-    price_excluding_tax = soup.find('table', class_="table table-striped").find_all('td')[2].text[2:] # Je récupère le prix du produit hors taxes
-    number_available = (re.sub("[^0-9]", "", soup.find('table', class_="table table-striped").find_all('td')[5].text)) # Je récupère le nombre de produits disponibles
-    product_description = soup.find('article', {'class': 'product_page'}).find_all('p')[3].text # Je récupère la description du produit
-    category = soup.find('a', href = re.compile('../category/books/')).text # Je récupère le nom de la catégorie
-    review_rating = soup.find('p', class_ = re.compile('star-rating')).get('class')[1] # Je récupère la note des avis
-    image_url = (url_book.replace('index.html', '') + soup.find('img').get('src')) # Je récupère l'url de l'image
-    os.makedirs('data/' + category, exist_ok=True) # Je créé un dossier qui porte le nom de la catégorie
-    path = 'data/' + category + category + '-data.csv'
-    liste_path = os.path.join(CUR_DIR, path)
-    
-    if os.path.exists(liste_path): # si le fichier existe j'ajoute les informations.
-        with open(path, 'a') as file:
-            file.write(product_page_url + ',' + universal_product_code + ',' + title + ',' + price_including_tax + ',' + price_excluding_tax + ',' + number_available + ',' + product_description + ',' + category + ',' + review_rating + ',' + image_url + ',' +'\n')
+    product_page_url = url_book 
+    universal_product_code = soup.find('table', class_='table table-striped').find_all('td')[0].text 
+    title = soup.find('div', {'class': 'product_main'}).h1.text 
+    price_including_tax = soup.find('table', class_='table table-striped').find_all('td')[3].text[2:] 
+    price_excluding_tax = soup.find('table', class_='table table-striped').find_all('td')[2].text[2:] 
+    number_available = (re.sub('[^0-9]', '', soup.find('table', class_='table table-striped').find_all('td')[5].text)) 
+    product_description = soup.find('article', {'class': 'product_page'}).find_all('p')[3].text 
+    category = soup.find('a', href = re.compile('../category/books/')).text.replace(' ', '_') 
+    review_rating = soup.find('p', class_ = re.compile('star-rating')).get('class')[1] 
+    image_url = (url_book.replace('index.html', '') + soup.find('img').get('src')) 
+    os.makedirs('Books_To_Scrape/' + category, exist_ok=True) 
+    cur_dir = os.path.dirname(__file__)
+    path_file = 'Books_To_Scrape/' + category + '/' + category + '-data.csv'
+    liste_path = os.path.join(cur_dir, path_file)
+
+    if os.path.exists(liste_path): 
+        with open(path_file, 'a') as file:
+            file.write(product_page_url + '|' + universal_product_code + '|' + title + '|' + price_including_tax + '|' + price_excluding_tax + '|' + number_available + '|' + product_description + '|' + category + '|' + review_rating + '|' + image_url + ',' +'\n')
     else:
-        with open(path, 'a') as file: # Sinon je créé un fichier et j'ajoute les informations
-            file.write('prduct page url,universal product code,title,price including tax, price excluding tax, number available, product description, category, review rating, image url\n')
-            file.write(product_page_url + ',' + universal_product_code + ',' + title + ',' + price_including_tax + ',' + price_excluding_tax + ',' + number_available + ',' + product_description + ',' + category + ',' + review_rating + ',' + image_url + ',' +'\n')
+        with open(path_file, 'w') as file: 
+            file.write('product page url, universal product code, title, price including tax, price excluding tax, number available, product description, category, review rating, image url\n')
+            file.write(product_page_url + '|' + universal_product_code + '|' + title + '|' + price_including_tax + '|' + price_excluding_tax + '|' + number_available + '|' + product_description + '|' + category + '|' + review_rating + '|' + image_url + ',' +'\n')
+    
 
-
-# Fonction qui permet de télécharger les images d'une url
+# This function makes a directory with the category name and extracts the image from the url in this directory.
 def download_image(url):
     soup = get_and_parse(url)
-    title = soup.find('div', {'class': 'product_main'}).h1.text.replace(" ","_") # Je récupère le titre du livre
-    category_name = soup.find('a', href = re.compile('../category/books/')).text # Je récupère le nom de la catégorie
-    image_url = (url.replace('index.html', '') + soup.find('img').get('src')) # Je récupère l'url de l'image
-    os.makedirs('data/' + category_name + '/images/' , exist_ok=True) # Je créé un dossier image
-    wget.download(image_url, 'data/' + category_name + '/images/' + "/" + title +'.jpg') # Je télécharge l'image
+    title = (re.sub('[/,. ]', '_',soup.find('div', {'class': 'product_main'}).h1.text)) # Get title of the book
+    category_name = soup.find('a', href = re.compile('../category/books/')).text.replace(' ', '_') # Get category name
+    image_url = (url.replace('index.html', '') + soup.find('img').get('src')) # Get image url
+    cur_dir = os.path.dirname(__file__)
+    os.makedirs('Books_To_Scrape/' + category_name + '/' + 'Images/' , exist_ok=True) # Make a directory "images" in category directory
+    path_image = 'Books_To_Scrape/' + category_name + '/' + 'Images/' + title +'.jpg'
+    list_path = os.path.join(cur_dir, path_image)
+    if not os.path.isfile(list_path): # Download image if it does not exist
+        wget.download(image_url, 'Books_To_Scrape/' + category_name + '/' + 'Images/' + title +'.jpg', bar = None)
