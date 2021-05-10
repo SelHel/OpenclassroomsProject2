@@ -14,8 +14,6 @@ def scrap_all_categories(url):
     category_urls = category_urls[1:] # Remove the first item from list because it corresponds to the url "All books".
     for url in category_urls:
         scrap_category(url)
-    
-
 
 
 

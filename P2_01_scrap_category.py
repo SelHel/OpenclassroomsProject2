@@ -14,20 +14,19 @@ def scrap_category(category_url):
     cur_dir = os.path.dirname(__file__)
     path_dir = 'Books_To_Scrape/' + category_name
     liste_path = os.path.join(cur_dir, path_dir)
-    if os.path.isdir(liste_path):                # check if the directory already exists
+    if os.path.isdir(liste_path):                # check if the directory already exists if True delete it
         shutil.rmtree('Books_To_Scrape/' + category_name)
     else:                                        # if it does not exist make a directory
         os.makedirs('Books_To_Scrape', exist_ok=True)
     
     category_pages_url = [] # Make a list to store URLs of category pages
     test_url = category_url.replace('index', 'page-1') # Replace the end of the url by page-1
-    reponse = requests.get(test_url)
-    if reponse.ok: # If page-1 exist
-        for i in range(1, 9): # Try to access to the next pages
-            url_page = category_url.replace('index', 'page-' + str(i))
-            reponse = requests.get(url_page)
-            if reponse.ok:
-                category_pages_url.append(url_page) # Append the url in the list
+    response = requests.get(test_url)
+    if response.ok:
+        new_page = category_url.replace('index', 'page-1') # Replace the end of the url by page-1
+        while requests.get(new_page).status_code == 200: # Try to access to the next pages
+            category_pages_url.append(new_page) # Append the url in the list
+            new_page = category_pages_url[-1].split("-")[0] + "-" + str(int(category_pages_url[-1].split("-")[1].split(".")[0]) + 1) + ".html"
     else:
         category_pages_url.append(category_url) # If page-1 doesn't exist, append index page URL of the category to the list
 
@@ -38,6 +37,3 @@ def scrap_category(category_url):
         for book in books_url: # Extracts the information and image for each category's book
             download_image(book)
             scrap_book(book)
-
-
-
