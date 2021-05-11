@@ -1,3 +1,5 @@
+*English version follows*
+
 # Scraping "books.toscrape.com"
 
 Programme "Scraper" qui récupère les informations de n'importe quel livre du site [Books to Scrape](http://books.toscrape.com).
@@ -19,7 +21,7 @@ Liste des informations à récupérer:
 * review_rating
 * image_url 
 
-Il doit également télécharger les images de couverture des livres dans un sous-dossier Images.
+Il doit également télécharger les images de couverture des livres dans un sous-dossier images.
 
 Le repository contient quatre scripts:  
 
@@ -34,22 +36,22 @@ Le script *"main.py"* est le script principal qui va permettre à l'utilisateur 
 
 1. Récupérer les informations d'un seul livre en entrant l'url du livre et les stocker dans un fichier csv.
 2. Récupérer les informations et les images de tous les livres d'une seule catégorie en entrant l'url de la catégorie et les stocker dans un fichier csv et un dossier images.
-3. Récupérer les informations et les images de tous les livres du site.
-4. Quitter le programme
+3. Récupérer les informations et les images de tous les livres du site et les stocker dans un fichier csv et un dossier images.
+4. Quitter le programme.
 
 
 ##### B) P2\_01\_scrap\_product.py
 
-Le script "P2\_01\_scrap\_product.py" contient les fonctions *scrap\_book* et *download\_image* qui comme leur nom l'indique vont permettre de scraper les informations d'un seul livre et de télécharger son image de couverture.
+Le script *"P2\_01\_scrap\_product.py"* contient les fonctions *scrap\_book* et *download\_image* qui comme leur nom l'indique vont permettre de scraper les informations d'un seul livre et de télécharger son image de couverture.
 
 ##### C) P2\_01\_scrap\_category.py
 
-Le script "P2\_01\_scrap\_category.py" contient la fonction *scrap\_category* qui va permettre de scraper les informations et les images de tous les livres d'une catégorie.
+Le script *"P2\_01\_scrap\_category.py"* contient la fonction *scrap\_category* qui va permettre de scraper les informations et les images de tous les livres d'une catégorie.
 
 
 ##### D) P2\_01\_scrap\_all\_categories.py
 
-Le script "P2\_01\_scrap\_all\_categories.py" contient la fonction *scrap\_all\_categories* qui va permettre de scraper les informations et les images de tous les livres du site.
+Le script *"P2\_01\_scrap\_all\_categories.py"* contient la fonction *scrap\_all\_categories* qui va permettre de scraper les informations et les images de tous les livres du site.
 
 ## Prérequis
 * Python 3.9 ( lien de téléchargement: <https://www.python.org/downloads>)
@@ -92,13 +94,122 @@ Un menu va apparaître il ne vous restera plus qu'a choisir parmi les différent
 
 ## Résultat
 
-Après avoir exécuter une des commandes, un dossier "Books\_To\_Scrape" sera créer dans le dossier courant.  
+Après avoir exécuté une des commandes, un dossier "Books\_To\_Scrape" sera créé dans le dossier courant.  
 Il se décomposera comme suit :
 
 * Dossier : "Books\_To\_Scrape"
 	* Sous-dossier : "Nom de la catégorie du livre"
-  		* Sous-dossier : "Images" (uniquement si vous scraper une catégorie ou toutes les catégories)
+  		* Sous-dossier : "Images" (uniquement si vous scrapé une catégorie ou toutes les catégories)
 		* Fichier : "*Nom de la catégorie du livre*-data".csv
+
+                                 
+# Scraping "books.toscrape.com"
+
+"Scraper" program that retrieves information from any book on the website [Books to Scrape](http://books.toscrape.com).
+
+## Description
+
+The program extracts the information from the books, write it in CSV file and save it in subdirectory of current directory.
+
+List of information to retrieve:
+
+* Product page url
+* Universal product code
+* Title
+* Price including tax
+* Price excluding tax
+* number_available
+* product_description
+* category
+* review_rating
+* image_url 
+
+And downloads the books cover images in images subdirectory.
+
+The repository contains four scripts:
+
+* main.py 
+* P2\_01\_scrap\_product.py
+* P2\_01\_scrap\_category.py
+* P2\_01\_scrap\_all\_categories.py
+
+### A) main.py
+
+*"main.py"* is the main script allowing the user to access menu and choose from four options:
+
+1. Scrape a single book and store the data in a csv file.
+2. Scrape a category and store the data in csv file and the images in subdirectory
+3. Scrape all books on the website and store the data in csv file and the images in subdirectory.
+4. Exit the program.
+
+##### B) P2\_01\_scrap\_product.py
+
+*"P2\_01\_scrap\_product.py"* script contains the *scrap\_book* and *download\_image* functions. They scrape book's information and upload its cover image. 
+
+##### C) P2\_01\_scrap\_category.py
+
+*"P2\_01\_scrap\_category.py"* script contains the *scrap\_category* function. This function scrape information and images from all books in a category.
+
+
+##### D) P2\_01\_scrap\_all\_categories.py
+
+*"P2\_01\_scrap\_all\_categories.py"* script contains the *scrap\_all\_categories* function. This function scrape information and images from all books on the website.
+
+## Requirements
+
+* Python 3.9 ( download link: <https://www.python.org/downloads>)
+
+## Starting the program
+
+Download the directory **OpenclassroomsProject2-main.zip** from this link [GitHub](https://github.com/SelHel/OpenclassroomsProject2).
+Extract files in directory of your choice.
+Then using the terminal on Mac and Linux or the command prompt on Windows:
+
+1. In current directory
+2. Create a virtual environment
+3. Activate the virtual environment
+4. Install the necessary modules from requirements.txt file.
+
+```
+ /Users/../OpenclassroomsProject2-main
+ python3 -m venv env
+ cd env
+ cd bin
+ source activate 
+ pip install -r requirements.txt
+
+```
+In terminal return to the current directory's root with the command "cd .." 
+
+```
+cd ..
+cd ..
+ /Users/../OpenclassroomsProject2-main
+
+```
+Run the script *"main.py"*
+
+```
+python main.py
+
+```
+Menu will appear. Then you will choose from different options.
+
+## Result
+
+After executing a choice, "Books\_To\_Scrape" directory will be created in the current directory.  
+It will be like that :
+
+* Directory : "Books\_To\_Scrape"
+	* Subdirectory : "Book's Category name"
+  		* Subdirectory : "Images" (only if you scrape category or all categories)
+		* File : "*Book's Category name*-data".csv
+
+
+
+
+
+
 
 ## Auteur
 
