@@ -192,7 +192,7 @@ Thumbs.db
 
 
 ### VisualStudioCode ###
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -229,5 +229,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Directory to ignore
+# Directory and file to ignore
 Books_To_Scrape/
+sandbox.py

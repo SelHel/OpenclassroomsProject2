@@ -6,9 +6,7 @@ Programme "Scraper" qui récupère les informations de n'importe quel livre du s
 
 ## Descriptif
 
-Le programme doit être capable d'extraire les informations des livres et de les écrire dans un fichier CSV et l'enregistré dans un sous-dossier du dossier courant.
-
-Liste des informations à récupérer:
+Le programme doit être capable d'extraire les informations suivantes :
 
 * Product page url
 * Universal product code
@@ -21,37 +19,39 @@ Liste des informations à récupérer:
 * review_rating
 * image_url 
 
+puis de les écrire dans un fichier CSV et l'enregistré dans un dossier.
+
 Il doit également télécharger les images de couverture des livres dans un sous-dossier images.
 
 Le repository contient quatre scripts:  
 
 * main.py 
-* P2\_01\_scrap\_product.py
-* P2\_01\_scrap\_category.py
-* P2\_01\_scrap\_all\_categories.py
+* scrap\_book.py
+* scrap\_category.py
+* scrap\_all\_categories.py
 
 ### A) main.py
 
 Le script *"main.py"* est le script principal qui va permettre à l'utilisateur d'accéder à un menu et d'effectuer un choix parmi les 4 options suivantes :
 
-1. Récupérer les informations d'un seul livre en entrant l'url du livre et les stocker dans un fichier csv.
+1. Récupérer les informations d'un seul livre en entrant l'url du livre et les afficher dans le terminal.
 2. Récupérer les informations et les images de tous les livres d'une seule catégorie en entrant l'url de la catégorie et les stocker dans un fichier csv et un dossier images.
 3. Récupérer les informations et les images de tous les livres du site et les stocker dans un fichier csv et un dossier images.
 4. Quitter le programme.
 
 
-##### B) P2\_01\_scrap\_product.py
+##### B) scrap\_book.py
 
-Le script *"P2\_01\_scrap\_product.py"* contient les fonctions *scrap\_book* et *download\_image* qui comme leur nom l'indique vont permettre de scraper les informations d'un seul livre et de télécharger son image de couverture.
+Le script *"scrap\_book.py"* contient les fonctions *scrap\_book* et *download\_image* qui comme leur nom l'indique vont permettre de scraper les informations d'un seul livre et de télécharger son image de couverture.
 
-##### C) P2\_01\_scrap\_category.py
+##### C) scrap\_category.py
 
-Le script *"P2\_01\_scrap\_category.py"* contient la fonction *scrap\_category* qui va permettre de scraper les informations et les images de tous les livres d'une catégorie.
+Le script *"scrap\_category.py"* contient la fonction *scrap\_category* qui va permettre de scraper les informations et les images de tous les livres d'une catégorie.
 
 
-##### D) P2\_01\_scrap\_all\_categories.py
+##### D) scrap\_all\_categories.py
 
-Le script *"P2\_01\_scrap\_all\_categories.py"* contient la fonction *scrap\_all\_categories* qui va permettre de scraper les informations et les images de tous les livres du site.
+Le script *"scrap\_all\_categories.py"* contient la fonction *scrap\_all\_categories* qui va permettre de scraper les informations et les images de tous les livres de toutes les catégories du site.
 
 ## Prérequis
 * Python 3.9 ( lien de téléchargement: <https://www.python.org/downloads>)
@@ -70,18 +70,8 @@ Ensuite, en utilisant le terminal sur Mac et Linux ou l'invite de commandes sur 
 ```
  /Users/../OpenclassroomsProject2-main
  python3 -m venv env
- cd env
- cd bin
- source activate 
+ source env/bin/activate 
  pip install -r requirements.txt
-
-```
-Toujours dans le terminal revenez à la racine du dossier courant grâce à la commande "cd .."
-
-```
-cd ..
-cd ..
- /Users/../OpenclassroomsProject2-main
 
 ```
 Puis lancez le script *"main.py"*
@@ -129,9 +119,9 @@ And downloads the books cover images in images subdirectory.
 The repository contains four scripts:
 
 * main.py 
-* P2\_01\_scrap\_product.py
-* P2\_01\_scrap\_category.py
-* P2\_01\_scrap\_all\_categories.py
+* scrap\_book.py
+* scrap\_category.py
+* scrap\_all\_categories.py
 
 ### A) main.py
 
@@ -142,18 +132,18 @@ The repository contains four scripts:
 3. Scrape all books on the website and store the data in csv file and the images in subdirectory.
 4. Exit the program.
 
-##### B) P2\_01\_scrap\_product.py
+##### B) scrap\_book.py
 
-*"P2\_01\_scrap\_product.py"* script contains the *scrap\_book* and *download\_image* functions. They scrape book's information and upload its cover image. 
+*"scrap\_product.py"* script contains the *scrap\_book* and *download\_image* functions. They scrape book's information and upload its cover image. 
 
-##### C) P2\_01\_scrap\_category.py
+##### C) scrap\_category.py
 
-*"P2\_01\_scrap\_category.py"* script contains the *scrap\_category* function. This function scrape information and images from all books in a category.
+*"scrap\_category.py"* script contains the *scrap\_category* function. This function scrape information and images from all books in a category.
 
 
-##### D) P2\_01\_scrap\_all\_categories.py
+##### D) scrap\_all\_categories.py
 
-*"P2\_01\_scrap\_all\_categories.py"* script contains the *scrap\_all\_categories* function. This function scrape information and images from all books on the website.
+*"scrap\_all\_categories.py"* script contains the *scrap\_all\_categories* function. This function scrape information and images from all books on the website.
 
 ## Requirements
 
@@ -173,18 +163,8 @@ Then using the terminal on Mac and Linux or the command prompt on Windows:
 ```
  /Users/../OpenclassroomsProject2-main
  python3 -m venv env
- cd env
- cd bin
- source activate 
+ source env/bin/activate 
  pip install -r requirements.txt
-
-```
-In terminal return to the current directory's root with the command "cd .." 
-
-```
-cd ..
-cd ..
- /Users/../OpenclassroomsProject2-main
 
 ```
 Run the script *"main.py"*
@@ -204,11 +184,6 @@ It will be like that :
 	* Subdirectory : "Book's Category name"
   		* Subdirectory : "Images" (only if you scrape category or all categories)
 		* File : "*Book's Category name*-data".csv
-
-
-
-
-
 
 
 ## Auteur
