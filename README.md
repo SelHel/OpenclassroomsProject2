@@ -13,15 +13,15 @@ Le programme doit être capable d'extraire les informations suivantes :
 * Title
 * Price including tax
 * Price excluding tax
-* number_available
-* product_description
-* category
-* review_rating
-* image_url 
+* Number available
+* Product description
+* Category
+* Review rating
+* Image url 
 
-puis de les écrire dans un fichier CSV et l'enregistré dans un dossier.
+puis de les écrire dans un fichier CSV et l'enregistrer dans un dossier "Books\_To\_Scrape".
 
-Il doit également télécharger les images de couverture des livres dans un sous-dossier images.
+Il doit également télécharger les images de couverture des livres dans un sous-dossier "Images".
 
 Le repository contient quatre scripts:  
 
@@ -34,8 +34,8 @@ Le repository contient quatre scripts:
 
 Le script *"main.py"* est le script principal qui va permettre à l'utilisateur d'accéder à un menu et d'effectuer un choix parmi les 4 options suivantes :
 
-1. Récupérer les informations d'un seul livre en entrant l'url du livre et les afficher dans le terminal.
-2. Récupérer les informations et les images de tous les livres d'une seule catégorie en entrant l'url de la catégorie et les stocker dans un fichier csv et un dossier images.
+1. Récupérer les informations d'un livre en entrant son url et de les afficher dans le terminal.
+2. Récupérer les informations et les images de tous les livres d'une seule catégorie en entrant son url et les stocker dans un fichier csv et un dossier images.
 3. Récupérer les informations et les images de tous les livres du site et les stocker dans un fichier csv et un dossier images.
 4. Quitter le programme.
 
@@ -64,7 +64,7 @@ Ensuite, en utilisant le terminal sur Mac et Linux ou l'invite de commandes sur 
 
 1. Placez vous dans le dossier courant
 2. Créez un environnement virtuel
-3. Activez votre environnement environnement virtuel
+3. Activez votre environnement virtuel
 4. Installez les modules nécessaires au bon fonctionnement du programme depuis le fichier requirements.txt
 
 ```
@@ -99,22 +99,20 @@ Il se décomposera comme suit :
 
 ## Description
 
-The program extracts the information from the books, write it in CSV file and save it in subdirectory of current directory.
-
-List of information to retrieve:
+The program must be able to extract the following information:
 
 * Product page url
 * Universal product code
 * Title
 * Price including tax
 * Price excluding tax
-* number_available
-* product_description
-* category
-* review_rating
-* image_url 
+* Number available
+* Product description
+* Category
+* Review rating
+* Image url 
 
-And downloads the books cover images in images subdirectory.
+Then write them to a CSV file and save it to a "Books\_To\_Scrape" directory and downloads the cover images of the books in a sub-directory "Images".
 
 The repository contains four scripts:
 
@@ -127,14 +125,14 @@ The repository contains four scripts:
 
 *"main.py"* is the main script allowing the user to access menu and choose from four options:
 
-1. Scrape a single book and store the data in a csv file.
-2. Scrape a category and store the data in csv file and the images in subdirectory
+1. Scrape a single book and print the information in terminal.
+2. Scrape a category and store the data in csv file and the images in subdirectory.
 3. Scrape all books on the website and store the data in csv file and the images in subdirectory.
 4. Exit the program.
 
 ##### B) scrap\_book.py
 
-*"scrap\_product.py"* script contains the *scrap\_book* and *download\_image* functions. They scrape book's information and upload its cover image. 
+*"scrap\_book.py"* script contains the *scrap\_book* and *download\_image* functions. They scrape book's information and upload its cover image. 
 
 ##### C) scrap\_category.py
 
@@ -151,7 +149,7 @@ The repository contains four scripts:
 
 ## Starting the program
 
-Download the directory **OpenclassroomsProject2-main.zip** from this link [GitHub](https://github.com/SelHel/OpenclassroomsProject2).
+Download the directory **OpenclassroomsProject2-main.zip** from this link [GitHub](https://github.com/SelHel/OpenclassroomsProject2).	
 Extract files in directory of your choice.
 Then using the terminal on Mac and Linux or the command prompt on Windows:
 
