@@ -58,7 +58,7 @@ Le script *"scrap\_all\_categories.py"* contient la fonction *scrap\_all\_catego
 
 ## Démarrage du programme
 
-Après avoir téléchargé le dossier **OpenclassroomsProject2-main.zip** depuis ce lien [GitHub](https://github.com/SelHel/OpenclassroomsProject2).  
+Après avoir téléchargé le dossier **Build_A_Web_Scraper_With_Python-main.zip** depuis ce lien [GitHub](https://github.com/SelHel/Build_A_Web_Scraper_With_Python.git).  
 Extraire les fichiers dans un dossier de votre choix.  
 Ensuite, en utilisant le terminal sur Mac et Linux ou l'invite de commandes sur Windows :
 
