@@ -68,7 +68,7 @@ Ensuite, en utilisant le terminal sur Mac et Linux ou l'invite de commandes sur 
 4. Installez les modules nécessaires au bon fonctionnement du programme depuis le fichier requirements.txt
 
 ```
- /Users/../OpenclassroomsProject2-main
+ /Users/../Build_A_Web_Scraper_With_Python-main
  python3 -m venv env
  source env/bin/activate 
  pip install -r requirements.txt
@@ -149,7 +149,7 @@ The repository contains four scripts:
 
 ## Starting the program
 
-Download the directory **OpenclassroomsProject2-main.zip** from this link [GitHub](https://github.com/SelHel/OpenclassroomsProject2).	
+Download the directory **Build_A_Web_Scraper_With_Python-main.zip** from this link [GitHub](https://github.com/SelHel/Build_A_Web_Scraper_With_Python.git).	
 Extract files in directory of your choice.
 Then using the terminal on Mac and Linux or the command prompt on Windows:
 
@@ -159,7 +159,7 @@ Then using the terminal on Mac and Linux or the command prompt on Windows:
 4. Install the necessary modules from requirements.txt file.
 
 ```
- /Users/../OpenclassroomsProject2-main
+ /Users/../Build_A_Web_Scraper_With_Python-main
  python3 -m venv env
  source env/bin/activate 
  pip install -r requirements.txt
