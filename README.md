@@ -97,13 +97,12 @@ Utilisation du framework TinyDB, qui est une base de données persistante de typ
 	pip install -r requirements.txt
 	```
 
-* Puis lancez le script *"main.py"*
-
-```
-python main.py
-
-```
-Un menu va apparaître il ne vous restera plus qu'a choisir parmi les différentes options.
+* Puis lancez le script "main.py" :
+        ```
+	python main.py
+	```
+	
+* Un menu va apparaître il ne vous restera plus qu'a choisir parmi les différentes options.
 
 ## Résultat
 
