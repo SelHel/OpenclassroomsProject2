@@ -2,11 +2,11 @@
 
 # Web Scraping "books.toscrape.com"
 
-## 1.Descriptif
+## 1. Descriptif
 
-Programme "Scraper" qui permet d’obtenir les informations de n'importe quel livre du site [Books to Scrape](http://books.toscrape.com).
+Programme "Scraper" qui permet d’obtenir les informations de n'importe quel livre du site [Books to Scrape](http://books.toscrape.com).<br>
 Dans ce projet, j'ai utilisé le modèle « MVC » (Models, Views, Controllers). Le principal avantage de cette approche est qu’elle met en œuvre le principe de « séparation des responsabilités ». Chaque composant/classe est indépendant et responsable de sa propre tâche bien définie.
-Utilisation du framework TinyDB, qui est une base de données persistante de type JSON.
+
 
 Le programme extrait les informations suivantes :
 
@@ -55,30 +55,49 @@ Le script *"scrap\_category.py"* contient la fonction *scrap\_category* qui va p
 
 Le script *"scrap\_all\_categories.py"* contient la fonction *scrap\_all\_categories* qui va permettre de scraper les informations et les images de tous les livres de toutes les catégories du site.
 
-## 2.
+## 2. Technologies
+Utilisation du framework TinyDB, qui est une base de données persistante de type JSON.
 
-## 3.Prérequis
+## 3. Prérequis
 * Python 3.9 ( lien de téléchargement: <https://www.python.org/downloads>)
 
-## 4.Installation de l'application
+## 4. Installation du programme
 
-Après avoir téléchargé le dossier **Build_A_Web_Scraper_With_Python-main.zip** depuis ce lien [GitHub](https://github.com/SelHel/Build_A_Web_Scraper_With_Python.git).  
-Extraire les fichiers dans un dossier de votre choix.  
-Ensuite, en utilisant le terminal sur Mac et Linux ou l'invite de commandes sur Windows :
+* Cloner le dépôt en utilisant le terminal sous Mac/Linux ou l'invite de commandes sous Windows :<br>
 
-1. Placez vous dans le dossier courant
-2. Créez un environnement virtuel
-3. Activez votre environnement virtuel
-4. Installez les modules nécessaires au bon fonctionnement de l'application depuis le fichier requirements.txt
+	```
+	git@github.com:SelHel/Scraper-Books_to_Scrape.git
+	```
 
-```
- /Users/../Build_A_Web_Scraper_With_Python-main
- python3 -m venv env
- source env/bin/activate 
- pip install -r requirements.txt
+* Ensuite, placez vous dans le dossier courant :
 
-```
-Puis lancez le script *"main.py"*
+	```
+	cd Scraper-Books_to_Scrape-main
+	```
+* Puis créez votre environnement virtuel :
+
+	```
+	python -m venv <your-virtual-env-name>
+	```
+
+* Activez votre environnement virtuel :
+
+	```
+	<your-virtual-env-name>\Scripts\activate.bat (sous Windows)
+	```
+	ou
+	
+	```
+	source <your-virtual-env-name>/bin/activate (sous Mac/Linux)
+	```
+
+* Installez les dépendances avec la commande suivante :
+
+	```
+	pip install -r requirements.txt
+	```
+
+* Puis lancez le script *"main.py"*
 
 ```
 python main.py
