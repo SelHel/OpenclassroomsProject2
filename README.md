@@ -1,4 +1,4 @@
-*English version follows*
+*French version*
 
 # Scraping "books.toscrape.com"
 
@@ -101,7 +101,8 @@ Selim Helaoui
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-                                 
+*Engish version*
+
 # Scraping "books.toscrape.com"
 
 "Scraper" program that retrieves information from any book on the website [Books to Scrape](http://books.toscrape.com).
