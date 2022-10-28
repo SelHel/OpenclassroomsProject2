@@ -5,8 +5,6 @@
 ## 1. Descriptif
 
 Programme "Scraper" qui permet d’obtenir les informations de n'importe quel livre du site [Books to Scrape](http://books.toscrape.com).<br>
-Dans ce projet, j'ai utilisé le modèle « MVC » (Models, Views, Controllers). Le principal avantage de cette approche est qu’elle met en œuvre le principe de « séparation des responsabilités ». Chaque composant/classe est indépendant et responsable de sa propre tâche bien définie.
-
 
 Le programme extrait les informations suivantes :
 
@@ -19,9 +17,9 @@ Le programme extrait les informations suivantes :
 * Product description
 * Category
 * Review rating
-* Image url 
+* Image url
 
-puis les écris dans un fichier CSV et l'enregistre dans un dossier "Books\_To\_Scrape".
+puis stock ces données dans un fichier CSV et l'enregistre dans un dossier "Books\_To\_Scrape".
 
 Il doit également télécharger les images de couverture des livres dans un sous-dossier "Images".
 
@@ -56,7 +54,7 @@ Le script *"scrap\_category.py"* contient la fonction *scrap\_category* qui va p
 Le script *"scrap\_all\_categories.py"* contient la fonction *scrap\_all\_categories* qui va permettre de scraper les informations et les images de tous les livres de toutes les catégories du site.
 
 ## 2. Technologies
-Utilisation du framework TinyDB, qui est une base de données persistante de type JSON.
+
 
 ## 3. Prérequis
 * Python 3.9 ( lien de téléchargement: <https://www.python.org/downloads>)
@@ -66,7 +64,7 @@ Utilisation du framework TinyDB, qui est une base de données persistante de typ
 * Cloner le dépôt en utilisant le terminal sous Mac/Linux ou l'invite de commandes sous Windows :<br>
 
 	```
-	git@github.com:SelHel/Scraper-Books_to_Scrape.git
+	git clone git@github.com:SelHel/Scraper-Books_to_Scrape.git
 	```
 
 * Ensuite, placez vous dans le dossier courant :
@@ -97,7 +95,7 @@ Utilisation du framework TinyDB, qui est une base de données persistante de typ
 	pip install -r requirements.txt
 	```
 
-* Puis lancez le script "main.py" :
+* Puis lancez le programme avec la commande :
         ```
 	python main.py
 	```
@@ -125,7 +123,7 @@ Selim Helaoui
 
 *Engish version*
 
-# Scraping "books.toscrape.com"
+# Web Scraping "books.toscrape.com"
 
 "Scraper" program that retrieves information from any book on the website [Books to Scrape](http://books.toscrape.com).
 
