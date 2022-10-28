@@ -1,12 +1,14 @@
 *French version*
 
-# Scraping "books.toscrape.com"
+# Web Scraping "books.toscrape.com"
 
-Programme "Scraper" qui récupère les informations de n'importe quel livre du site [Books to Scrape](http://books.toscrape.com).
+## 1.Descriptif
 
-## Descriptif
+Programme "Scraper" qui permet d’obtenir les informations de n'importe quel livre du site [Books to Scrape](http://books.toscrape.com).
+Dans ce projet, j'ai utilisé le modèle « MVC » (Models, Views, Controllers). Le principal avantage de cette approche est qu’elle met en œuvre le principe de « séparation des responsabilités ». Chaque composant/classe est indépendant et responsable de sa propre tâche bien définie.
+Utilisation du framework TinyDB, qui est une base de données persistante de type JSON.
 
-Le programme doit être capable d'extraire les informations suivantes :
+Le programme extrait les informations suivantes :
 
 * Product page url
 * Universal product code
@@ -19,7 +21,7 @@ Le programme doit être capable d'extraire les informations suivantes :
 * Review rating
 * Image url 
 
-puis de les écrire dans un fichier CSV et l'enregistrer dans un dossier "Books\_To\_Scrape".
+puis les écris dans un fichier CSV et l'enregistre dans un dossier "Books\_To\_Scrape".
 
 Il doit également télécharger les images de couverture des livres dans un sous-dossier "Images".
 
@@ -53,10 +55,12 @@ Le script *"scrap\_category.py"* contient la fonction *scrap\_category* qui va p
 
 Le script *"scrap\_all\_categories.py"* contient la fonction *scrap\_all\_categories* qui va permettre de scraper les informations et les images de tous les livres de toutes les catégories du site.
 
-## Prérequis
+## 2.
+
+## 3.Prérequis
 * Python 3.9 ( lien de téléchargement: <https://www.python.org/downloads>)
 
-## Démarrage du programme
+## 4.Installation de l'application
 
 Après avoir téléchargé le dossier **Build_A_Web_Scraper_With_Python-main.zip** depuis ce lien [GitHub](https://github.com/SelHel/Build_A_Web_Scraper_With_Python.git).  
 Extraire les fichiers dans un dossier de votre choix.  
@@ -65,7 +69,7 @@ Ensuite, en utilisant le terminal sur Mac et Linux ou l'invite de commandes sur 
 1. Placez vous dans le dossier courant
 2. Créez un environnement virtuel
 3. Activez votre environnement virtuel
-4. Installez les modules nécessaires au bon fonctionnement du programme depuis le fichier requirements.txt
+4. Installez les modules nécessaires au bon fonctionnement de l'application depuis le fichier requirements.txt
 
 ```
  /Users/../Build_A_Web_Scraper_With_Python-main
