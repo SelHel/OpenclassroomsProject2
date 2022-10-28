@@ -92,6 +92,10 @@ Il se décomposera comme suit :
   		* Sous-dossier : "Images" (uniquement si vous scrapé une catégorie ou toutes les catégories)
 		* Fichier : "*Nom de la catégorie du livre*-data".csv
 
+## Auteur
+
+Selim Helaoui
+
                                  
 # Scraping "books.toscrape.com"
 
@@ -184,6 +188,6 @@ It will be like that :
 		* File : "*Book's Category name*-data".csv
 
 
-## Auteur
+## Author
 
 Selim Helaoui
