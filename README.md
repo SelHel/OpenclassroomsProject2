@@ -4,7 +4,7 @@
 
 ## 1. Descriptif
 
-Programme "Scraper" qui permet de collecter les données de n'importe quel livre du site [Books to Scrape](http://books.toscrape.com).<br>
+Programme "Scraper" qui permet de collecter les données de n'importe quel livre du site [books.toscrape.com](http://books.toscrape.com).<br>
 
 Le programme extrait les informations suivantes :
 
