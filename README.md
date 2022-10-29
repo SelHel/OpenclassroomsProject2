@@ -68,10 +68,10 @@ Il doit également télécharger les images de couverture des livres dans un sou
 
 * Puis lancez le programme avec la commande :
 
-        ```
+	```
 	python main.py
 	```
-	
+
 * Un menu va apparaître il ne vous restera plus qu'a choisir parmi les différentes options.
 
 ## 5. Résultat
