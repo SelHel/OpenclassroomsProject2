@@ -2,7 +2,7 @@
 
 # Web Scraping du site "books.toscrape.com"
 
-##1. Descriptif
+## 1. Descriptif
 
 Programme "Scraper" qui permet de collecter les données de n'importe quel livre du site [books.toscrape.com](http://books.toscrape.com)<br>
 
@@ -22,13 +22,14 @@ Le programme extrait les informations suivantes :
 Ces données sont stockées dans un fichier CSV enregistré dans un dossier "Books\_To\_Scrape".<br>
 Les images de couverture des livres sont également téléchargées et stockées dans un sous-dossier "Images".
 
-##2. Technologies
+## 2. Technologies
 
 
-##3. Prérequis
+## 3. Prérequis
+
 * Python 3.9 (lien de téléchargement: <https://www.python.org/downloads>)
 
-##4. Installation du programme
+## 4. Installation du programme
 
 Cloner le dépôt en utilisant le terminal sous Mac/Linux ou l'invite de commandes sous Windows :<br>
 ```
@@ -60,7 +61,7 @@ Installez les dépendances avec la commande suivante :
 pip install -r requirements.txt
 ```
 	
-##5. Exécution du programme
+## 5. Exécution du programme
 
 Pour éxécuter le programme lancez le script "main.py" avec la commande suivante :
 ```
@@ -69,7 +70,7 @@ python main.py
 
 Un menu va apparaître, il ne vous restera plus qu'a choisir parmi les différentes options.
 
-##6. Résultat
+## 6. Résultat
 
 Après avoir exécuté une des commandes, un dossier "Books\_To\_Scrape" sera créé dans le dossier courant.  
 Il se décomposera comme suit :
@@ -79,7 +80,7 @@ Il se décomposera comme suit :
   		* Sous-dossier : "Images" (uniquement si vous scrapé une catégorie ou toutes les catégories)
 		* Fichier : "*Nom de la catégorie du livre*-data".csv
 
-##7. Auteur
+## 7. Auteur
 
 Selim Helaoui
 
@@ -90,7 +91,7 @@ Selim Helaoui
 
 # Web Scraping of "books.toscrape.com"
 
-##1. Description
+## 1. Description
 
 "Scraper" program that retrieves data from any book on the website [books.toscrape.com](http://books.toscrape.com).<br>
 
@@ -109,13 +110,13 @@ The program must be able to extract the following information:
 
 Then write them to a CSV file and save it to a "Books\_To\_Scrape" directory and downloads the cover images of the books in a sub-directory "Images".
 
-##2. Technologies
+## 2. Technologies
 
-##3. Requirements
+## 3. Requirements
 
 * Python 3.9 (download link: <https://www.python.org/downloads>)
 
-##4. Program installation
+## 4. Program installation
 
 Clone repository using Terminal on Mac/Linux or Command Prompt on Windows:<br>
 ```
@@ -147,7 +148,7 @@ You now need to install all the libraries necessary for this program to work pro
 pip install -r requirements.txt
 ```
 
-##5. Program execution
+## 5. Program execution
 
 Run the program with the following command :
 
@@ -157,7 +158,7 @@ python main.py
 ```
 Menu will appear. Then you will choose from different options.
 
-##6. Result
+## 6. Result
 
 After executing a choice, "Books\_To\_Scrape" directory will be created in the current directory.  
 It will be like that :
@@ -168,6 +169,6 @@ It will be like that :
 		* File : "*Book's Category name*-data".csv
 
 
-##7. Author
+## 7. Author
 
 Selim Helaoui
