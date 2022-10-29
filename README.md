@@ -135,12 +135,12 @@ python -m venv <your-virtual-env-name>
 
 Activate your virtual environment :
 ```
-<your-virtual-env-name>\Scripts\activate.bat (sous Windows)
+<your-virtual-env-name>\Scripts\activate.bat (on Windows)
 ```
 or
 	
 ```
-source <your-virtual-env-name>/bin/activate (sous Mac/Linux)
+source <your-virtual-env-name>/bin/activate (on Mac/Linux)
 ```
 
 You now need to install all the libraries necessary for this program to work properly, for this you can run the following command :
