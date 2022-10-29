@@ -22,12 +22,14 @@ Le programme extrait les informations suivantes :
 Ces données sont stockées dans un fichier CSV enregistré dans un dossier "Books\_To\_Scrape".<br>
 Les images de couverture des livres sont également téléchargées et stockées dans un sous-dossier "Images".
 
-## 2. Technologies
-
-
-## 3. Prérequis
+## 2. Prérequis
 
 * Python 3.9 (lien de téléchargement: <https://www.python.org/downloads>)
+
+## 3. Bibliothèques Python utilisées
+
+* Requests
+* BeautifulSoup
 
 ## 4. Installation du programme
 
@@ -109,11 +111,14 @@ The program must be able to extract the following information:
 
 Then write them to a CSV file and save it to a "Books\_To\_Scrape" directory and downloads the cover images of the books in a sub-directory "Images".
 
-## 2. Technologies
-
-## 3. Requirements
+## 2. Requirements
 
 * Python 3.9 (download link: <https://www.python.org/downloads>)
+
+## 3. Python libraries used
+
+* Requests
+* BeautifulSoup
 
 ## 4. Program installation
 
