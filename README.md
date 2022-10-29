@@ -42,28 +42,25 @@ Ensuite, placez vous dans le dossier courant :
 cd Scraper-Books_to_Scrape-main
 ```
 
-* Puis créez votre environnement virtuel :
+Puis créez votre environnement virtuel :
+```
+python -m venv <your-virtual-env-name>
+```
 
-	```
-	python -m venv <your-virtual-env-name>
-	```
-
-* Activez votre environnement virtuel :
-
-	```
-	<your-virtual-env-name>\Scripts\activate.bat (sous Windows)
-	```
-	ou
+Activez votre environnement virtuel :
+```
+<your-virtual-env-name>\Scripts\activate.bat (sous Windows)
+```
+ou
 	
-	```
-	source <your-virtual-env-name>/bin/activate (sous Mac/Linux)
-	```
+```
+source <your-virtual-env-name>/bin/activate (sous Mac/Linux)
+```
 
-* Installez les dépendances avec la commande suivante :
-
-	```
-	pip install -r requirements.txt
-	```
+Installez les dépendances avec la commande suivante :
+```
+pip install -r requirements.txt
+```
 	
 ## 5. Exécution du programme
 
@@ -74,7 +71,7 @@ python main.py
 
 Un menu va apparaître, il ne vous restera plus qu'a choisir parmi les différentes options.
 
-## 5. Résultat
+## 6. Résultat
 
 Après avoir exécuté une des commandes, un dossier "Books\_To\_Scrape" sera créé dans le dossier courant.  
 Il se décomposera comme suit :
@@ -84,7 +81,7 @@ Il se décomposera comme suit :
   		* Sous-dossier : "Images" (uniquement si vous scrapé une catégorie ou toutes les catégories)
 		* Fichier : "*Nom de la catégorie du livre*-data".csv
 
-## Auteur
+## 7. Auteur
 
 Selim Helaoui
 
