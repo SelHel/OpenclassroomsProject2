@@ -4,7 +4,7 @@
 
 ## 1. Descriptif
 
-Programme "Scraper" qui permet d’obtenir les informations de n'importe quel livre du site [Books to Scrape](http://books.toscrape.com).<br>
+Programme "Scraper" qui permet de collecter les données de n'importe quel livre du site [Books to Scrape](http://books.toscrape.com).<br>
 
 Le programme extrait les informations suivantes :
 
@@ -23,35 +23,6 @@ puis stock ces données dans un fichier CSV et l'enregistre dans un dossier "Boo
 
 Il doit également télécharger les images de couverture des livres dans un sous-dossier "Images".
 
-Le repository contient quatre scripts:  
-
-* main.py 
-* scrap\_book.py
-* scrap\_category.py
-* scrap\_all\_categories.py
-
-### A) main.py
-
-Le script *"main.py"* est le script principal qui va permettre à l'utilisateur d'accéder à un menu et d'effectuer un choix parmi les 4 options suivantes :
-
-1. Récupérer les informations d'un livre en entrant son url et de les afficher dans le terminal.
-2. Récupérer les informations et les images de tous les livres d'une seule catégorie en entrant son url et les stocker dans un fichier csv et un dossier images.
-3. Récupérer les informations et les images de tous les livres du site et les stocker dans un fichier csv et un dossier images.
-4. Quitter le programme.
-
-
-##### B) scrap\_book.py
-
-Le script *"scrap\_book.py"* contient les fonctions *scrap\_book* et *download\_image* qui comme leur nom l'indique vont permettre de scraper les informations d'un seul livre et de télécharger son image de couverture.
-
-##### C) scrap\_category.py
-
-Le script *"scrap\_category.py"* contient la fonction *scrap\_category* qui va permettre de scraper les informations et les images de tous les livres d'une catégorie.
-
-
-##### D) scrap\_all\_categories.py
-
-Le script *"scrap\_all\_categories.py"* contient la fonction *scrap\_all\_categories* qui va permettre de scraper les informations et les images de tous les livres de toutes les catégories du site.
 
 ## 2. Technologies
 
@@ -102,7 +73,7 @@ Le script *"scrap\_all\_categories.py"* contient la fonction *scrap\_all\_catego
 	
 * Un menu va apparaître il ne vous restera plus qu'a choisir parmi les différentes options.
 
-## Résultat
+## 5. Résultat
 
 Après avoir exécuté une des commandes, un dossier "Books\_To\_Scrape" sera créé dans le dossier courant.  
 Il se décomposera comme suit :
@@ -144,34 +115,6 @@ The program must be able to extract the following information:
 
 Then write them to a CSV file and save it to a "Books\_To\_Scrape" directory and downloads the cover images of the books in a sub-directory "Images".
 
-The repository contains four scripts:
-
-* main.py 
-* scrap\_book.py
-* scrap\_category.py
-* scrap\_all\_categories.py
-
-### A) main.py
-
-*"main.py"* is the main script allowing the user to access menu and choose from four options:
-
-1. Scrape a single book and print the information in terminal.
-2. Scrape a category and store the data in csv file and the images in subdirectory.
-3. Scrape all books on the website and store the data in csv file and the images in subdirectory.
-4. Exit the program.
-
-##### B) scrap\_book.py
-
-*"scrap\_book.py"* script contains the *scrap\_book* and *download\_image* functions. They scrape book's information and upload its cover image. 
-
-##### C) scrap\_category.py
-
-*"scrap\_category.py"* script contains the *scrap\_category* function. This function scrape information and images from all books in a category.
-
-
-##### D) scrap\_all\_categories.py
-
-*"scrap\_all\_categories.py"* script contains the *scrap\_all\_categories* function. This function scrape information and images from all books on the website.
 
 ## Requirements
 
