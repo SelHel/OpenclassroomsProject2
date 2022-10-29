@@ -32,17 +32,16 @@ Il doit également télécharger les images de couverture des livres dans un sou
 
 ## 4. Installation du programme
 
-* Cloner le dépôt en utilisant le terminal sous Mac/Linux ou l'invite de commandes sous Windows :<br>
+Cloner le dépôt en utilisant le terminal sous Mac/Linux ou l'invite de commandes sous Windows :<br>
+```
+git clone git@github.com:SelHel/Scraper-Books_to_Scrape.git
+```
 
-	```
-	git clone git@github.com:SelHel/Scraper-Books_to_Scrape.git
-	```
+Ensuite, placez vous dans le dossier courant :
+```
+cd Scraper-Books_to_Scrape-main
+```
 
-* Ensuite, placez vous dans le dossier courant :
-
-	```
-	cd Scraper-Books_to_Scrape-main
-	```
 * Puis créez votre environnement virtuel :
 
 	```
@@ -65,14 +64,15 @@ Il doit également télécharger les images de couverture des livres dans un sou
 	```
 	pip install -r requirements.txt
 	```
+	
+## 5. Exécution du programme
 
-* Puis lancez le programme avec la commande :
+Pour éxécuter l'application lancez le script "main.py" :
+```
+python main.py
+```
 
-	```
-	python main.py
-	```
-
-* Un menu va apparaître il ne vous restera plus qu'a choisir parmi les différentes options.
+Un menu va apparaître, il ne vous restera plus qu'a choisir parmi les différentes options.
 
 ## 5. Résultat
 
