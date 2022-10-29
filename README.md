@@ -55,8 +55,7 @@ ou
 ```
 source <your-virtual-env-name>/bin/activate (sous Mac/Linux)
 ```
-
-Installez les dépendances avec la commande suivante :
+Vous devez maintenant installer toutes les librairies nécessaires au bon fonctionnement de ce programme, pour cela exécuter la commande suivante :
 ```
 pip install -r requirements.txt
 ```
@@ -143,7 +142,7 @@ or
 source <your-virtual-env-name>/bin/activate (on Mac/Linux)
 ```
 
-You now need to install all the libraries necessary for this program to work properly, for this you can run the following command :
+You now need to install all the libraries necessary for this program to work properly, for this run the following command :
 ```
 pip install -r requirements.txt
 ```
