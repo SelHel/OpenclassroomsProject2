@@ -1,8 +1,8 @@
 *French version*
 
-# Web Scraping "books.toscrape.com"
+# Web Scraping du site "books.toscrape.com"
 
-## 1. Descriptif
+##1. Descriptif
 
 Programme "Scraper" qui permet de collecter les données de n'importe quel livre du site [books.toscrape.com](http://books.toscrape.com)<br>
 
@@ -19,18 +19,16 @@ Le programme extrait les informations suivantes :
 * Review rating
 * Image url
 
-puis stock ces données dans un fichier CSV et l'enregistre dans un dossier "Books\_To\_Scrape".
+Ces données sont stockées dans un fichier CSV enregistré dans un dossier "Books\_To\_Scrape".
+Les images de couverture des livres sont également téléchargées et stockées dans un sous-dossier "Images".
 
-Il doit également télécharger les images de couverture des livres dans un sous-dossier "Images".
-
-
-## 2. Technologies
+##2. Technologies
 
 
-## 3. Prérequis
-* Python 3.9 ( lien de téléchargement: <https://www.python.org/downloads>)
+##3. Prérequis
+* Python 3.9 (lien de téléchargement: <https://www.python.org/downloads>)
 
-## 4. Installation du programme
+##4. Installation du programme
 
 Cloner le dépôt en utilisant le terminal sous Mac/Linux ou l'invite de commandes sous Windows :<br>
 ```
@@ -62,16 +60,16 @@ Installez les dépendances avec la commande suivante :
 pip install -r requirements.txt
 ```
 	
-## 5. Exécution du programme
+##5. Exécution du programme
 
-Pour éxécuter l'application lancez le script "main.py" :
+Pour éxécuter le programme lancez le script "main.py" avec la commande suivante :
 ```
 python main.py
 ```
 
 Un menu va apparaître, il ne vous restera plus qu'a choisir parmi les différentes options.
 
-## 6. Résultat
+##6. Résultat
 
 Après avoir exécuté une des commandes, un dossier "Books\_To\_Scrape" sera créé dans le dossier courant.  
 Il se décomposera comme suit :
@@ -81,22 +79,20 @@ Il se décomposera comme suit :
   		* Sous-dossier : "Images" (uniquement si vous scrapé une catégorie ou toutes les catégories)
 		* Fichier : "*Nom de la catégorie du livre*-data".csv
 
-## 7. Auteur
+##7. Auteur
 
 Selim Helaoui
-
-
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 *Engish version*
 
-# Web Scraping "books.toscrape.com"
+# Web Scraping of "books.toscrape.com"
 
-"Scraper" program that retrieves information from any book on the website [Books to Scrape](http://books.toscrape.com).
+##1. Description
 
-## Description
+"Scraper" program that retrieves data from any book on the website [books.toscrape.com](http://books.toscrape.com).<br>
 
 The program must be able to extract the following information:
 
@@ -113,30 +109,47 @@ The program must be able to extract the following information:
 
 Then write them to a CSV file and save it to a "Books\_To\_Scrape" directory and downloads the cover images of the books in a sub-directory "Images".
 
+##2. Technologies
 
-## Requirements
+##3. Requirements
 
-* Python 3.9 ( download link: <https://www.python.org/downloads>)
+* Python 3.9 (download link: <https://www.python.org/downloads>)
 
-## Starting the program
+##4. Program installation
 
-Download the directory **Build_A_Web_Scraper_With_Python-main.zip** from this link [GitHub](https://github.com/SelHel/Build_A_Web_Scraper_With_Python.git).	
-Extract files in directory of your choice.
-Then using the terminal on Mac and Linux or the command prompt on Windows:
-
-1. In current directory
-2. Create a virtual environment
-3. Activate the virtual environment
-4. Install the necessary modules from requirements.txt file.
-
+Clone repository using Terminal on Mac/Linux or Command Prompt on Windows:<br>
 ```
- /Users/../Build_A_Web_Scraper_With_Python-main
- python3 -m venv env
- source env/bin/activate 
- pip install -r requirements.txt
-
+git clone git@github.com:SelHel/Scraper-Books_to_Scrape.git
 ```
-Run the script *"main.py"*
+
+Then go to the current directory as follows :
+```
+cd Scraper-Books_to_Scrape-main
+```
+
+Create a virtual environment :
+```
+python -m venv <your-virtual-env-name>
+```
+
+Activate your virtual environment :
+```
+<your-virtual-env-name>\Scripts\activate.bat (sous Windows)
+```
+or
+	
+```
+source <your-virtual-env-name>/bin/activate (sous Mac/Linux)
+```
+
+You now need to install all the libraries necessary for this program to work properly, for this you can run the following command :
+```
+pip install -r requirements.txt
+```
+
+##5. Program execution
+
+Run the program with the following command :
 
 ```
 python main.py
@@ -144,7 +157,7 @@ python main.py
 ```
 Menu will appear. Then you will choose from different options.
 
-## Result
+##6. Result
 
 After executing a choice, "Books\_To\_Scrape" directory will be created in the current directory.  
 It will be like that :
@@ -155,6 +168,6 @@ It will be like that :
 		* File : "*Book's Category name*-data".csv
 
 
-## Author
+##7. Author
 
 Selim Helaoui
