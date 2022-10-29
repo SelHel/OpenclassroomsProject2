@@ -19,7 +19,7 @@ Le programme extrait les informations suivantes :
 * Review rating
 * Image url
 
-Ces données sont stockées dans un fichier CSV enregistré dans un dossier "Books\_To\_Scrape".
+Ces données sont stockées dans un fichier CSV enregistré dans un dossier "Books\_To\_Scrape".<br>
 Les images de couverture des livres sont également téléchargées et stockées dans un sous-dossier "Images".
 
 ##2. Technologies
