@@ -24,14 +24,14 @@ Les images de couverture des livres sont également téléchargées et stockées
 
 ## 2. Prérequis
 
-* Python 3.9 (lien de téléchargement: <https://www.python.org/downloads>)
+* Python 3+ (lien de téléchargement: <https://www.python.org/downloads>)
 
 ## 3. Bibliothèques Python utilisées
 
 * Requests
 * BeautifulSoup
 
-## 4. Installation du programme
+## 4. Installation
 
 Cloner le dépôt en utilisant le terminal sous Mac/Linux ou l'invite de commandes sous Windows :<br>
 ```
@@ -62,7 +62,7 @@ Vous devez maintenant installer toutes les librairies nécessaires au bon foncti
 pip install -r requirements.txt
 ```
 	
-## 5. Exécution du programme
+## 5. Exécution
 
 Pour éxécuter le programme lancez le script "main.py" avec la commande suivante :
 ```
@@ -80,10 +80,6 @@ Il se décomposera comme suit :
 	* Sous-dossier : "Nom de la catégorie du livre"
   		* Sous-dossier : "Images" (uniquement si vous scrapé une catégorie ou toutes les catégories)
 		* Fichier : "*Nom de la catégorie du livre*-data".csv
-
-## 7. Auteur
-
-Selim Helaoui
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -113,14 +109,14 @@ Then write them to a CSV file and save it to a "Books\_To\_Scrape" directory and
 
 ## 2. Requirements
 
-* Python 3.9 (download link: <https://www.python.org/downloads>)
+* Python 3+ (download link: <https://www.python.org/downloads>)
 
 ## 3. Python libraries used
 
 * Requests
 * BeautifulSoup
 
-## 4. Program installation
+## 4. Installation
 
 Clone repository using Terminal on Mac/Linux or Command Prompt on Windows:<br>
 ```
@@ -152,7 +148,7 @@ You now need to install all the libraries necessary for this program to work pro
 pip install -r requirements.txt
 ```
 
-## 5. Program execution
+## 5. Execution
 
 Run the program with the following command :
 
@@ -171,8 +167,3 @@ It will be like that :
 	* Subdirectory : "Book's Category name"
   		* Subdirectory : "Images" (only if you scrape category or all categories)
 		* File : "*Book's Category name*-data".csv
-
-
-## 7. Author
-
-Selim Helaoui
