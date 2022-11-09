@@ -57,6 +57,7 @@ ou
 ```
 source <your-virtual-env-name>/bin/activate (sous Mac/Linux)
 ```
+
 Vous devez maintenant installer toutes les librairies nécessaires au bon fonctionnement de ce programme, pour cela exécuter la commande suivante :
 ```
 pip install -r requirements.txt
